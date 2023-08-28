@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+    <record id="hide_pl_product_pricelist_view_inherit" model="ir.ui.view">
+      <field name="name">hide.pl.product.pricelist.view.inherit</field>
+      <field name="model">product.pricelist</field>
+      <field name="inherit_id" ref="product.product_pricelist_view" />
+      <field name="arch" type="xml">
+          <xpath expr="//group[@name='pricelist_discounts']" position="after">
+            <group>
+              <field name="team_ids" widget="many2many_tags"/>
+            </group>
+          </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
